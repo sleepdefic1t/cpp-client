@@ -120,7 +120,7 @@ jobs:
         shell: cmd
         run: |
           dir '${{ github.workspace }}'
-          msbuild '${{ github.workspace }}\ark_cpp_client.sln'
+          msbuild '${{ github.workspace }}\\ark_cpp_client.sln'
       - name: Run Tests
         shell: cmd
         run: '${{ github.workspace }}\\test\\Debug\\ark_cpp_client_tests.exe'
