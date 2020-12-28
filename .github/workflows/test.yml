@@ -112,6 +112,7 @@ jobs:
           dir '${{ github.workspace }}/extern/curl'
           dir '${{ github.workspace }}/extern/curl/x64'
           dir '${{ github.workspace }}/extern/curl/x64/Debug'
+          dir '${{ github.workspace }}/extern/curl/x64/Debug/CURL'
           dir '${{ github.workspace }}/extern/curl/build'
           dir '${{ github.workspace }}/extern/curl/build/generated'
           dir '${{ github.workspace }}/extern/curl/build/lib'
