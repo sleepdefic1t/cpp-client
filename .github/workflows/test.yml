@@ -101,7 +101,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Setup MSBuild.exe
-        uses: warrenbuckley/Setup-MSBuild@v1
+        uses: microsoft/setup-msbuild@v1.0.2
       - name: CMake
         run: cmake -D UNIT_TEST=ON -G "Visual Studio 15 2017 Win64" -DCURL_STATICLIB=ON .
       - name: Build Solution
