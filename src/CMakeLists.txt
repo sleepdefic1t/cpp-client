@@ -76,19 +76,13 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${ARK_CPP_CLIENT_INCLUDE_DIRS}
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
-# Link against CURL
-# ------------------------------------------------------------------------------
-
-target_link_libraries(${PROJECT_NAME} PUBLIC libcurl)
-
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-# Windows: Link to `crypt32`
+# Linking
 # ------------------------------------------------------------------------------
 
 if (MSVC)
-    target_link_libraries(${PROJECT_NAME} PUBLIC crypt32)
+    target_link_libraries(${PROJECT_NAME} PUBLIC curl crypt32)
+else()
+    target_link_libraries(${PROJECT_NAME} PUBLIC libcurl)
 endif()
 
 # ------------------------------------------------------------------------------

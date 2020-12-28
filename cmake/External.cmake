@@ -41,8 +41,16 @@ add_subdirectory("${EXTERNAL_LIBRARY_DIR}/curl/src"
                  "${EXTERNAL_LIBRARY_DIR}/curl/build"
                  EXCLUDE_FROM_ALL)
 
+
 set(CURL_INCLUDE_DIR
     ${EXTERNAL_LIBRARY_DIR}/curl/src/include
     CACHE INTERNAL "cURL: Include Folder Path")
+
+if (MSVC)
+    set(CURL_LIBRARY ${EXTERNAL_LIBRARY_DIR}/curl/src/build/lib)
+    find_package(CURL)
+    include_directories(${CURL_INCLUDE_DIRS})
+    link_directories(${CURL_LIBRARIES})
+endif()
 
 # ------------------------------------------------------------------------------
