@@ -103,7 +103,7 @@ jobs:
       - name: Setup MSBuild.exe
         uses: microsoft/setup-msbuild@v1.0.2
       - name: CMake
-        run: cmake -D UNIT_TEST=ON -D CURL_STATICLIB=ON -G "Visual Studio 15 2017 Win64" .
+        run: cmake -D UNIT_TEST=ON -D CURL_STATICLIB=ON -G "Visual Studio 16 2019" .
       - name: Build Solution
         shell: cmd
         run: msbuild "%GITHUB_WORKSPACE%\ark_cpp_client.sln"
