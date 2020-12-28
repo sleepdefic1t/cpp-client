@@ -80,7 +80,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${ARK_CPP_CLIENT_INCLUDE_DIRS}
 # ------------------------------------------------------------------------------
 
 if (MSVC)
-    target_link_libraries(${PROJECT_NAME} PUBLIC curl crypt32)
+    target_link_libraries(${PROJECT_NAME} PUBLIC libcurl_impl crypt32)
 else()
     target_link_libraries(${PROJECT_NAME} PUBLIC libcurl)
 endif()
