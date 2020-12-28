@@ -105,7 +105,7 @@ jobs:
       - name: CMake
         run: cmake -D UNIT_TEST=ON -DCURL_STATICLIB=ON -G "Visual Studio 16 2019" .
       - name: dir
-        run: dir %GITHUB_WORKSPACE%/extern/curl/src/build/lib
+        run: dir "%GITHUB_WORKSPACE%/extern/curl/src/build/lib"
       - name: Build Solution
         shell: cmd
         run: msbuild "%GITHUB_WORKSPACE%\ark_cpp_client.sln"
