@@ -109,9 +109,9 @@ jobs:
           dir '${{ github.workspace }}'
           dir '${{ github.workspace }}/extern'
           dir '${{ github.workspace }}/extern/curl'
+          dir '${{ github.workspace }}/extern/curl/build'
           dir '${{ github.workspace }}/extern/curl/src'
-          dir '${{ github.workspace }}/extern/curl/src/build'
-          dir '${{ github.workspace }}/extern/curl/src/build/lib'
+          dir '${{ github.workspace }}/extern/curl/src/lib'
       - name: Build Solution
         shell: cmd
         run: msbuild '${{ github.workspace }}\ark_cpp_client.sln'
