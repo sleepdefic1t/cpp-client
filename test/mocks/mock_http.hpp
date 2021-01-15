@@ -13,6 +13,8 @@
 #include <memory>
 #include <string>
 
+#include <iostream>
+
 #include "http/http_support.hpp"
 
 namespace Ark {
@@ -21,7 +23,11 @@ namespace Client {
 ////////////////////////////////////////////////////////////////////////////////
 class MockHttp : public AbstractHttp {
   //////////////////////////////////////////////////////////////////////////////
-  std::string get(const std::string& request) override { return request; }
+  std::string get(const std::string& request) override { 
+
+    printf("\nget::requestt: %s\n", request.c_str());
+
+    return request; }
 
   //////////////////////////////////////////////////////////////////////////////
   std::string post(const std::string& request,

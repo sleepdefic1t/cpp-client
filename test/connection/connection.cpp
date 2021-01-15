@@ -33,8 +33,9 @@ TEST(api_connection, constructor_ip_port) {
 
   constexpr auto expected = "167.114.29.55:4003";
 
-  const auto result = connection.getPeer();
+  const std::string result = connection.getPeer();
 
   printf("\n\nresult: %s", result.c_str());
+
   ASSERT_TRUE(strcmp(result.c_str(), expected) == 0);
 }
