@@ -3,6 +3,8 @@
 
 #include <arkClient.h>
 
+#include <iostream>
+
 ////////////////////////////////////////////////////////////////////////////////
 constexpr auto DEFAULT_PEER_APN = "https://wallets.ark.io";
 constexpr auto ADN_PEER = "167.114.29.55";
@@ -30,6 +32,7 @@ TEST(api_connection, constructor_ip_port) {
   Connection<Api> connection(ADN_PEER, ADN_API_PORT);
 
   constexpr auto expected = "167.114.29.55:4003";
+
   const auto result = connection.getPeer();
 
   printf("\n\nresult: %s", result.c_str());
