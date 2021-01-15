@@ -18,8 +18,6 @@
 
 #include "http/http_support.hpp"
 
-#include <iostream>
-
 namespace Ark {
 namespace Client {
 
@@ -50,11 +48,6 @@ class AbstractConnection : public api::ApiHandler {
     sprintf(&peer[0], "%s:%d", domain, port);
 
     this->peer_ = std::move(peer);
-
-    printf("\n\npeer_: %s", peer_.c_str());
-
-
-
   }
 
   //////////////////////////////////////////////////////////////////////////////
